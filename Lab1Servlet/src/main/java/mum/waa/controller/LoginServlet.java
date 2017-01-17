@@ -7,6 +7,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import mum.waa.model.User;
 import mum.waa.service.UserService;
@@ -51,8 +52,13 @@ public class LoginServlet extends HttpServlet {
 		
 		if(userService.validateUser(user) == true)
 		{
-			RequestDispatcher RequetsDispatcherObj =request.getRequestDispatcher("view/success.jsp");
-			RequetsDispatcherObj.forward(request, response);
+			HttpSession session = request.getSession();
+			session.setAttribute("username", username);
+		
+			response.sendRedirect(request.getContextPath() + "/view/success.jsp");
+			
+			//RequestDispatcher RequetsDispatcherObj =request.getRequestDispatcher("view/success.jsp");
+			//RequetsDispatcherObj.forward(request, response);
 		}
 		else
 		{

@@ -1,0 +1,5 @@
+package mum.waa.repository;
+
+public interface ProductRepository {
+	public Product getProductById();
+}
