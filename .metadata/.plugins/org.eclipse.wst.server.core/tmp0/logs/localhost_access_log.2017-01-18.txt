@@ -350,3 +350,5 @@
 0:0:0:0:0:0:0:1 - - [18/Jan/2017:14:26:40 -0600] "GET /Lab2/getProduct/I-100 HTTP/1.1" 200 969
 0:0:0:0:0:0:0:1 - - [18/Jan/2017:14:26:40 -0600] "GET /Lab2/getProduct/res/bootstrap/3.3.7-1/css/bootstrap.min.css HTTP/1.1" 404 992
 0:0:0:0:0:0:0:1 - - [18/Jan/2017:14:26:44 -0600] "POST /Lab2/processOrder HTTP/1.1" 200 887
+127.0.0.1 - - [18/Jan/2017:14:51:01 -0600] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [18/Jan/2017:14:51:02 -0600] "GET /Lab3/WEB-INF/web.xml HTTP/1.1" 404 992

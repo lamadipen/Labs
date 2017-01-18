@@ -2,4 +2,5 @@
 <aop-reference-model>
 <aop-project name="Lab1Spring"/>
 <aop-project name="Lab2"/>
+<aop-project name="Lab3"/>
 </aop-reference-model>
