@@ -17,6 +17,13 @@ public class ProductController {
 	@Autowired
 	private ProductService productService;
 	
+	@RequestMapping(value="/", method= RequestMethod.GET)
+	public String welcome() {
+		
+		return "redirect:/products";
+	}
+	
+	
 	@RequestMapping(value="/products", method= RequestMethod.GET)
 	public String home(Model mode) {
 		mode.addAttribute("products", productService.getAllProducts());
