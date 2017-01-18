@@ -1,14 +1,18 @@
 package mum.waa.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import mum.waa.model.Product;
 import mum.waa.repository.ProductRepository;
 
+@Service
 public class ProductServiceImpl implements ProductService{
 	
 	@Autowired
-	ProductRepository productRepository;
+	private ProductRepository productRepository;
 	
 	public void processOrder(String productId, int quantity)
 	{
@@ -26,5 +30,15 @@ public class ProductServiceImpl implements ProductService{
 			}
 		}
 		
+	}
+
+	public List<Product> getAllProducts() {
+		// TODO Auto-generated method stub
+		return productRepository.getAllProducts();
+	}
+
+	public Product getProductById(String productId) {
+		// TODO Auto-generated method stub
+		return productRepository.getProductById(productId);
 	}
 }

@@ -1,0 +1,30 @@
+package mum.waa.repository;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import mum.waa.model.Product;
+
+public class ProductRepositoryImpl implements ProductRepository{
+	
+	private List<Product> products= new ArrayList<Product>();
+	
+	public ProductRepositoryImpl() {
+		Product iPhone = new Product();
+		iPhone.setProductId("I-100");
+		iPhone.setName("Iphone");
+		
+		Product s7 = new Product();
+		s7.setProductId("S-100");
+		s7.setName("s7");
+				
+		products.add(iPhone);
+	}
+	
+	public Product getProductById(String productId) {
+		// TODO Auto-generated method stub
+		
+		return null;
+	}
+
+}

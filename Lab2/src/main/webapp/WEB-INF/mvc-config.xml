@@ -11,11 +11,15 @@
 
 
     <mvc:annotation-driven />
+    <mvc:resources location="/webjars/" mapping="/res/**"/>
+    <mvc:resources location="/WEB-INF/resources/" mapping="/custom/**"/>
 
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 	        <!-- Example: a logical view name of 'showMessage' is mapped to '/WEB-INF/jsp/showMessage.jsp' -->
 	        <property name="prefix" value="/WEB-INF/view/"/>
 	        <property name="suffix" value=".jsp"/>
 	</bean>
+	
+	
 
 </beans>

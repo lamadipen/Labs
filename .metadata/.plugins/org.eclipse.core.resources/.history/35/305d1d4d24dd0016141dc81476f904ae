@@ -1,0 +1,23 @@
+package mum.waa.controller;
+
+import java.util.List;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import mum.waa.model.Product;
+
+@Controller
+public class ProductController {
+	
+	@RequestMapping(value="/hello", method= RequestMethod.GET)
+	public String home() {
+	return "index";
+	}
+	
+	
+	public List<Product> getAllProducts();
+	
+
+}
