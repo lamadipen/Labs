@@ -1,0 +1,8 @@
+package mum.waa.service;
+
+public interface Userservice {
+	public boolean authenticate(User user)
+	{
+		
+	}
+}

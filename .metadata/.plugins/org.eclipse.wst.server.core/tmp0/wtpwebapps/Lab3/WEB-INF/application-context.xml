@@ -7,9 +7,11 @@
 	http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
 	<context:component-scan base-package="mum.waa" />
-
 	<mvc:annotation-driven />
-
+	
+	<mvc:resources location="/webjars/" mapping="/res/**"/>
+	<mvc:resources location="WEB-INF/resources/" mapping="/myres/**"/>
+	
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<!-- Example: a logical view name of 'showMessage' is mapped to '/WEB-INF/jsp/showMessage.jsp' -->

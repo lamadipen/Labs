@@ -1,0 +1,19 @@
+package mum.waa.service;
+
+import org.springframework.stereotype.Service;
+
+import mum.waa.model.User;
+
+@Service
+public class UserServiceImpl implements Userservice{
+
+	
+	@Override
+	public boolean authenticate(User user) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	
+	
+
+}

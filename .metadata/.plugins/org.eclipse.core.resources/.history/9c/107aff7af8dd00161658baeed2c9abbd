@@ -1,0 +1,5 @@
+package mum.waa.service;
+
+public class UserService {
+
+}
