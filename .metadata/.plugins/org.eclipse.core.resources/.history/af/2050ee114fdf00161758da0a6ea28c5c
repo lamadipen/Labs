@@ -1,0 +1,2 @@
+listProduct.form.title.label=All Products
+addProduct.form.error.invalidname=Name must be at least 2 character and max of 14

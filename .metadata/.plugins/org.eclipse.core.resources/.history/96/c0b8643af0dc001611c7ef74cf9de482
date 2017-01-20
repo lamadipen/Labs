@@ -1,5 +1,0 @@
-package mum.waa.repository;
-
-public class ProductRepositoryImpl implements ProductRepository{
-
-}

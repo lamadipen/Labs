@@ -1,0 +1,22 @@
+package mum.waa.customvalidation;
+
+import org.springframework.validation.Errors;
+import org.springframework.validation.Validator;
+
+import mum.waa.model.Product;
+
+public class UnitsInStrockValidator implements Validator{
+
+	@Override
+	public boolean supports(Class<?> arg0) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void validate(Object target, Errors errors) {
+		Product product = (Product) target;
+		
+	}
+
+}
