@@ -1,9 +1,12 @@
 package mum.waa.repository;
 
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import org.springframework.stereotype.Repository;
 
+import mum.waa.model.Product;
 import mum.waa.model.User;
 
 @Repository
@@ -33,5 +36,36 @@ public class UserRepositoryImpl implements UserRepository{
 		}
 		
 		return false;
+	}
+
+	@Override
+	public boolean addUser(User user) {
+		// TODO Auto-generated method stub
+		users.put(user.getUsername(),user);
+		return true;
+	}
+
+	@Override
+	public boolean deleteUser(String username) {
+		users.remove(username);
+		return true;
+	}
+
+	@Override
+	public boolean updateUser(User user) {
+		users.replace(user.getUsername(), user);
+		return true;
+	}
+
+	@Override
+	public User getUserById(String username) {
+		// TODO Auto-generated method stub
+		return users.get(username);
+	}
+
+	@Override
+	public Map<String,User> getAllUsers() {
+		// TODO Auto-generated method stub
+		return users;
 	}
 }
