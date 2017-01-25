@@ -5,5 +5,7 @@
 <aop-project name="Lab2"/>
 <aop-project name="Lab3"/>
 <aop-project name="Lab4"/>
+<aop-project name="ExamPractice"/>
+<aop-project name="LabTiles"/>
 <aop-project name="LabWithOutPRG"/>
 </aop-reference-model>

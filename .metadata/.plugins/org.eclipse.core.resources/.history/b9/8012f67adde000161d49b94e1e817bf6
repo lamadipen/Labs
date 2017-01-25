@@ -1,0 +1,42 @@
+package mum.waa.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttributes;
+
+@Controller
+@SessionAttributes("name")
+public class WelcomeController {
+
+	@RequestMapping(value={"/","welcome"}, method=RequestMethod.GET)
+	public String welcome(Model model)
+	{
+		model.addAttribute("welcome_msg", "Welcome to  the site");
+		return "welcome.jsp";
+	}
+	
+	@RequestMapping(value={"/hello"}, method=RequestMethod.POST)
+	public String askName(Model model,@RequestParam("user_name") String username)
+	{
+		model.addAttribute("name", username);
+		return "welcome.jsp";
+	}
+	
+	@RequestMapping(value={"/hello"}, method=RequestMethod.GET)
+	public String askNameForm()
+	{
+		return "askname.jsp";
+	}
+	
+	
+	@RequestMapping(value={"/hello"}, method=RequestMethod.GET)
+	public String askNameForm()
+	{
+		return "askname.jsp";
+	}
+	
+	
+}

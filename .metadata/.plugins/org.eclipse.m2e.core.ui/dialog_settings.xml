@@ -4,12 +4,16 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="mum.waa.jsf"/>
+			<item value="mum.waa.exam"/>
 			<item value="mum.waa"/>
 			<item value="Lab3"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="JsfLab1"/>
+			<item value="ExamPractice"/>
 			<item value="Lab3"/>
 			<item value="mum.waa"/>
 		</list>

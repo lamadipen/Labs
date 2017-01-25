@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tiles-definitions>
+	<definition name="base.definition" template="/templates/master_template.jsp">
+		<put-attribute name="header" value="/fragments/header.jsp" />
+		<put-attribute name="menu" value="" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/fragments/footer.jsp" />
+	</definition>
+	<definition name="addcontact" extends="base.definition">
+		<put-attribute name="body" value="/fragments/add_contact.jsp" />
+		<put-attribute name="menu" value="/fragments/showcontactmenu.jsp" />
+	</definition>
+	<definition name="allcontacts" extends="base.definition">
+		<put-attribute name="body" value="/fragments/contacts_list.jsp" />
+		<put-attribute name="menu" value="/fragments/addcontactmenu.jsp" />
+	</definition>
+</tiles-definitions>
