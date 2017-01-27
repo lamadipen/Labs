@@ -1,0 +1,16 @@
+package mum.waa.model;
+
+import javax.faces.component.UIViewRoot;
+import javax.faces.context.FacesContext;
+import javax.inject.Named;
+
+@Named("dynalocal")
+public class DynamicLocale {
+	
+	public void changeLocale(String code)
+	{
+		UIViewRoot viewRoot = FacesContext.getCurrentInstance().getViewRoot()
+	}
+	
+
+}

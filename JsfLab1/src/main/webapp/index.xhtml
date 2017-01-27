@@ -7,14 +7,20 @@
 	<title>Insert title here</title>
 </h:head>
 <h:body>
-	<h1>Sign up</h1>
-	
+	<h1>#{res_msg['index.form.title']}</h1>
 	<h:form>
-		Name: <br/>
-		<h:inputText value="#{user.username}" /> <br/>
-		Password: <br/>
-		<h:inputText value="#{user.password}"></h:inputText> <br/>
+		Name: <br />
+		<h:inputText value="#{user.username}" />
+		<br />
+		Password: <br />
+		<h:inputText value="#{user.password}"></h:inputText>
+		<br />
 		<h:commandButton value="login" action="welcome"></h:commandButton>
 	</h:form>
+
+	<h:button value="Japanese" outcome="#{dynalocal.changeLocale('jp')}"></h:button>
+	<h:button value="English" outcome="#{dynalocal.changeLocale('en')}"></h:button>
+
+
 </h:body>
 </html>

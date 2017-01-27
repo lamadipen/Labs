@@ -1,0 +1,59 @@
+<!-- Simple table example and applying css -->
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<h:link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css"></h:link>
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css"></link>
+	<title>Insert title here</title>
+	<style>
+.orders {
+	border: thin solid black;
+}
+
+.ordersHeader {
+	text-align: center;
+	font-style: italic;
+	color: Snow;
+	background: Teal;
+}
+
+.oddColumn {
+	height: 25px;
+	text-align: center;
+	background: MediumTurquoise;
+}
+
+.evenColumn {
+	text-align: center;
+	background: PowderBlue;
+}
+</style>
+</h:head>
+<h:body>
+	<h1>#{res_msg['index.form.title']}</h1>
+
+	<h:form>
+		<h:dataTable value="#{tableData.names}" var="name" bgcolor="White"
+			styleClass="w3-table-all" border="2" captionStyle="font-style:italic"
+			headerClass="ordersHeader" columnClasses="oddColumn,evenColumn"
+			>
+			<f:facet name="caption">Table of Names</f:facet>
+			<h:column>
+				<f:facet name="header">Last Name</f:facet>
+				#{name.last}
+			</h:column>
+			<h:column>
+				<f:facet name="header">First Name</f:facet>
+				#{name.first}
+			</h:column>
+		</h:dataTable>
+	
+		
+	</h:form>
+</h:body>
+</html>

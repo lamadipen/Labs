@@ -1,0 +1,8 @@
+package mum.waa.model;
+
+import javax.inject.Named;
+
+@Named("dynalocal")
+public class DynamicLocale {
+
+}
