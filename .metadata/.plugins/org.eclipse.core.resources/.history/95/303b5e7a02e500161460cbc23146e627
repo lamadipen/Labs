@@ -1,0 +1,68 @@
+package mum.waa.controller;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+import javax.enterprise.context.SessionScoped;
+import javax.inject.Inject;
+import javax.inject.Named;
+
+import mum.waa.model.Name;
+import mum.waa.service.NameService;
+
+
+@Named("tableData")
+@SessionScoped
+public class TableData implements Serializable {
+
+	@Inject
+	NameService nameService;
+	
+	public Name[] getNames() {
+		return nameService.getAllNames();
+	}
+
+	/*public String save() {
+		for (Name name : names)
+			name.setEditable(false);
+		return null;
+	}*/
+
+	public String deleteRow(Name nameToDelete) {
+	
+		
+		return null;
+	}
+	
+	public String createName(String first, String last)
+	{
+		nameService.createName(new Name(first,last));
+		
+		return "index3?faces-redirect=true";
+		
+	}
+	
+/* Alternative by call method internally	
+ public void createName(String first, String last)
+	{
+		Name name = new Name(first, last);
+		
+		Name[] temp ={name};
+		
+		Stream namesStream  = (Stream) Arrays.stream(names);
+		Stream tempStream = (Stream) Arrays.stream(temp);
+		
+		List<Name> tmpList = (List<Name>) Stream.concat(namesStream,tempStream).collect(Collectors.toList());
+		
+		names = tmpList.toArray(new Name[tmpList.size()]);
+		
+		getNames();
+		
+	}
+*/
+
+}

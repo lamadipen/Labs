@@ -1,0 +1,10 @@
+package mum.waa.service;
+
+import mum.waa.model.Name;
+
+public interface NameService {
+	public boolean createName();
+	public boolean deleteName();
+	public Name[] getAllNames();
+	public Name getName();
+}

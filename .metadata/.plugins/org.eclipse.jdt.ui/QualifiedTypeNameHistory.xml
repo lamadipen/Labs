@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="mum.waa.service.UserService"/>
-<fullyQualifiedTypeName name="mum.waa.repository.ProductRepository"/>
-<fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
-<fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="mum.waa.service.ProductService"/>
-<fullyQualifiedTypeName name="javax.websocket.server.PathParam"/>
-<fullyQualifiedTypeName name="mum.waa.service.Userservice"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.support.SessionStatus"/>
 <fullyQualifiedTypeName name="mum.waa.model.User"/>
 <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
@@ -51,7 +43,6 @@
 <fullyQualifiedTypeName name="javax.enterprise.context.ConversationScoped"/>
 <fullyQualifiedTypeName name="javax.enterprise.context.Conversation"/>
 <fullyQualifiedTypeName name="javax.inject.Inject"/>
-<fullyQualifiedTypeName name="javax.inject.Named"/>
 <fullyQualifiedTypeName name="javax.faces.component.UIViewRoot"/>
 <fullyQualifiedTypeName name="javax.faces.context.FacesContext"/>
 <fullyQualifiedTypeName name="java.util.Locale"/>
@@ -59,4 +50,14 @@
 <fullyQualifiedTypeName name="com.sun.xml.internal.ws.developer.UsesJAXBContext"/>
 <fullyQualifiedTypeName name="javax.enterprise.context.SessionScoped"/>
 <fullyQualifiedTypeName name="java.io.Serializable"/>
+<fullyQualifiedTypeName name="javax.inject.Named"/>
+<fullyQualifiedTypeName name="mum.waa.model.Name"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.sun.el.stream.Stream"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="com.sun.xml.internal.ws.developer.StreamingAttachmentFeature"/>
+<fullyQualifiedTypeName name="java.util.stream.Stream"/>
+<fullyQualifiedTypeName name="com.sun.corba.se.spi.orbutil.fsm.State"/>
+<fullyQualifiedTypeName name="java.util.stream.Collectors"/>
+<fullyQualifiedTypeName name="java.util.List"/>
 </qualifiedTypeNameHistroy>

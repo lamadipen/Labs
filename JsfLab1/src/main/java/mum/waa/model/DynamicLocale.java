@@ -20,7 +20,7 @@ public class DynamicLocale implements Serializable{
 	public String changeLocale(String code)
 	{
 		UIViewRoot viewRoot = FacesContext.getCurrentInstance().getViewRoot();
-		viewRoot.setLocale(new Locale(code));
+		viewRoot.setLocale(new Locale("de"));
 		return "index";
 	}
 	

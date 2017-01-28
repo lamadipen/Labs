@@ -1,0 +1,38 @@
+package mum.waa.serviceImpl;
+
+import javax.inject.Inject;
+
+import mum.waa.model.Name;
+import mum.waa.repository.NameRepository;
+import mum.waa.service.NameService;
+
+public class NameServiceImpl implements NameService{
+
+	@Inject
+	NameRepository nameRepository;
+	
+	@Override
+	public boolean createName() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean deleteName() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public Name[] getAllNames() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Name getName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

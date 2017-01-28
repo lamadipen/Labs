@@ -1,0 +1,8 @@
+package mum.waa.repository;
+
+public interface NameRepository {
+	public boolean createName();
+	public boolean deleteName();
+	public List<Name> getAllNames();
+	public Name getName();
+}

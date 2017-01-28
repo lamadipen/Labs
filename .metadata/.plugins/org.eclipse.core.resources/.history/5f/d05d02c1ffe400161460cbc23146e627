@@ -1,0 +1,38 @@
+package mum.waa.repositoryImpl;
+
+import java.util.List;
+
+import mum.waa.model.Name;
+import mum.waa.repository.NameRepository;
+
+public class NameRepositoryImpl implements NameRepository{
+	
+	private static Name[] names = new Name[] { new Name("William", "Dupont"), new Name("Anna", "Keeney"),
+			new Name("Mariko", "Randor"), new Name("John", "Wilson"), new Name("Dipen", "Lama"),
+			new Name("Jai", "Limbu"), new Name("Sanjay", "Shrestha") };
+	
+	@Override
+	public boolean createName() {
+		// TODO Auto-generated method stub
+		return true;
+	}
+
+	@Override
+	public boolean deleteName() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public List<Name> getAllNames() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Name getName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

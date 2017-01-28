@@ -1,0 +1,19 @@
+package mum.waa.serviceImpl;
+
+import mum.waa.service.NameService;
+
+public class NameServiceImpl implements NameService{
+
+	@Override
+	public boolean createName() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean deleteName() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

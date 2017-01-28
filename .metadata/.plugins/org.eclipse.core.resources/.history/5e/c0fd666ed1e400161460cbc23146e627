@@ -1,0 +1,7 @@
+package mum.waa.serviceImpl;
+
+import mum.waa.service.NameService;
+
+public class NameServiceImpl implements NameService{
+
+}

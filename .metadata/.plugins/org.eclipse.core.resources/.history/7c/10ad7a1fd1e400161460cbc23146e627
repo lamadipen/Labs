@@ -1,0 +1,7 @@
+package mum.waa.repositoryImpl;
+
+import mum.waa.repository.NameRepository;
+
+public class NameRepositoryImpl implements NameRepository{
+
+}
