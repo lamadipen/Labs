@@ -1,0 +1,30 @@
+package mum.waa.model;
+
+import java.io.Serializable;
+
+import javax.enterprise.context.Conversation;
+import javax.enterprise.context.SessionScoped;
+import javax.inject.Inject;
+import javax.inject.Named;
+
+@Named
+@SessionScoped
+public class QuizBean implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	int currentIndex=0;
+	
+public void setAnswer(String newValue)
+	{
+		if(currentIndex==0)converstion.begin();
+		int answer = Integer.parseInt(newValue.trim());
+		
+		
+	}
+	
+	
+}

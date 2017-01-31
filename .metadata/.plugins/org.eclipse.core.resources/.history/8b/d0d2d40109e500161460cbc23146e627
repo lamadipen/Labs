@@ -1,0 +1,9 @@
+package mum.waa.model;
+
+import java.io.Serializable;
+
+public class ProblemBean implements Serializable{
+
+	private ArrayList<Integer> sequence;
+	8. private int solution;
+}

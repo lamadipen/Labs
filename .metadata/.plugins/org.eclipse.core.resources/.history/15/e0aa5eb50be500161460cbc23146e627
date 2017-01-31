@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	>
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>#{res_msg['title']</title>
+	<f:view locale="ja"></f:view>
+</h:head>
+<h:body>
+	
+	<h:form>
+		<h3>#{res_msg['heading']}</h3>
+		<p>
+			<h:outputFormat value=#{res_msg.currentScore}>
+				<f:param value="#{quizBean.score}"></f:param>
+			</h:outputFormat>
+		</p>
+		<p>#{msgs.guessNext}</p>
+		<p>#{quizBean.current.sequence}</p>
+		<p>
+            #{msgs.answer}
+            <h:inputText value="#{quizBean.answer}"/>
+         </p>
+         <p><h:commandButton value="#{msgs.next}"/></p>
+	</h:form>
+
+	<h:button value="Japanese" outcome="#{dynalocal.changeLocale('ja')}"></h:button>
+	<h:button value="English" outcome="#{dynalocal.changeLocale('en')}"></h:button>
+
+
+</h:body>
+</html>

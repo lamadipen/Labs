@@ -1,4 +1,0 @@
-listProduct.form.title.label=All Products
-addProduct.form.error.invalidname=Name must be at least 2 character and max of 14
-validator.UnitsInStockValidator.message =
-Product with unit price 1000 or higher cannot be added more than 99 units at a time.

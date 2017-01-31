@@ -47,6 +47,7 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="F:\MUM\WAA\Labs\auto-complete"/>
 			<item value="F:\MUM\WAA\Labs\Lab1Spring"/>
 			<item value="F:\MUM\WAA\Labs\Lab1Servlet"/>
 		</list>

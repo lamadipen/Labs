@@ -1,7 +1,0 @@
-package mum.waa.customvalidation;
-
-import org.springframework.validation.Validator;
-
-public class UnitsInStrockValidator implements Validator{
-
-}
