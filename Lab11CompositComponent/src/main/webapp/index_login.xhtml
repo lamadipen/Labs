@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:util="http://java.sun.com/jsf/composite/util"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      >
+    <h:head>
+        <title>Welcome</title>
+    </h:head>
+    <h:body>
+        <util:login namePrompt="Username" passwordPrompt="Password" loginButtonText="Login"
+                    name="#{user.name}" password="#{user.password}" loginAction="#{user.display()}">
+
+            <f:validateLength for="nameInput" minimum="4"/>
+            <f:validator for="passwordInput" validatorId="mum.waa.Password" /> 
+            <f:validateLength for="inputs" maximum="10"/>
+            <f:actionListener for="loginButton" type="mum.waa.LoginActionListener"/>
+            <f:facet name="heading">
+                <div class="prompt">Please log in</div>
+            </f:facet>
+
+            <f:facet name="error" >
+                <h:messages layout="table" styleClass="error"/>
+            </f:facet>
+        </util:login>
+
+    </h:body>
+
+</html>

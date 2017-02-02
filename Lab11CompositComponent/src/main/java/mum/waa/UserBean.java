@@ -17,4 +17,11 @@ public class UserBean implements Serializable {
 
    public String getPassword() { return password; }
    public void setPassword(String newValue) { password = newValue; }   
+   
+   public String display()
+   {
+       System.out.println(getName()+" : "+ getPassword());
+       return null;
+   }
+   
 }
