@@ -65,5 +65,6 @@ public class RegisterForm implements Serializable {
             if (loc.getCountry().equals(event.getNewValue())) {
                 FacesContext.getCurrentInstance().getViewRoot().setLocale(loc);
             }
+        FacesContext.getCurrentInstance().renderResponse();
     }
 }

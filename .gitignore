@@ -63,3 +63,8 @@ $RECYCLE.BIN/
 *.lnk
 /Lab10EventHandlling/nbproject/private/
 /Lab10EventHandlling/build/
+/Lab10EventHandlling/dist/
+/LabPhaseTracker/nbproject/private/
+/LabPhaseTracker/build/
+/LabPhaseTracker/dist/
+/Lab11CompositComponent/target/

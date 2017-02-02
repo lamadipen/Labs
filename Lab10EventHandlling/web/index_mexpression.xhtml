@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <h:outputStylesheet library="css" name="styles.css"/>
+        <title>#{msgs.windowTitle}</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <span class="emphasis">#{msgs.pageTitle}</span>
+            <h:panelGrid columns="2">
+                #{msgs.streetAddressPrompt}
+                <h:inputText value="#{PData.streetAddress}"/>
+
+                #{msgs.cityPrompt}
+                <h:inputText value="#{PData.city}"/>
+
+                #{msgs.statePrompt}
+                <h:inputText value="#{PData.state}"/>
+            </h:panelGrid>
+            <h:commandButton value="#{msgs.submit}"/>
+            Passing method parameter:
+            <h:commandLink action="#{PData.changeLocale('de')}" value="Denmark"></h:commandLink>
+
+            Passing f:param
+            <h:commandLink action="#{PData.changeLocaleParam()}" value="Nepal">
+                <f:param name="languageCode" value="np"></f:param>
+            </h:commandLink>
+            
+             Passing f:attribute
+            <h:commandLink action="#{PData.test}" actionListener="#{PData.changeLocaleAttribure}" value="England">
+                <f:attribute name="languageCode" value="en"></f:attribute>
+            </h:commandLink>
+             
+             The f:setPropertyActionListener Tag
+            <h:commandLink action="#{PData.test}" value="China">
+                <f:setPropertyActionListener target="#{PData.languageCodeDirect}" value="ch"></f:setPropertyActionListener>
+            </h:commandLink>
+            
+        </h:form>
+    </h:body>
+</html>
+
