@@ -19,13 +19,7 @@ public class User implements Serializable{
     private String password;
    
     private String country;
-    static List<String> countires;
-    static {
-        countires = new ArrayList<>();
-        countires.add("Nepal");
-        countires.add("China");
-    }
-    
+   
     public User()
     {
        
@@ -58,15 +52,6 @@ public class User implements Serializable{
     public void setPassword(String password) {
         this.password = password;
     }
-
-    /**
-     * @return the countires
-     */
-    public List<String> getCountires() {
-        return countires;
-    }
-
-
 
     /**
      * @return the country

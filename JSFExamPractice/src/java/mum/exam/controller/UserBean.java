@@ -6,6 +6,7 @@
 package mum.exam.controller;
 
 import java.io.Serializable;
+import java.util.List;
 import javax.enterprise.context.SessionScoped;
 import javax.faces.application.FacesMessage;
 import javax.faces.component.UIComponent;
@@ -14,6 +15,7 @@ import javax.inject.Inject;
 import javax.inject.Named;
 import javax.validation.ValidationException;
 import mum.exam.model.User;
+import mum.exam.service.UserService;
 
 /**
  *
@@ -24,7 +26,11 @@ import mum.exam.model.User;
 public class UserBean implements Serializable{
     @Inject
     private User user;
-
+    @Inject
+    private UserService userService;
+    List<String> countires;
+    
+    
     /**
      * @return the user
      */
@@ -54,4 +60,13 @@ public class UserBean implements Serializable{
 
         }
     }
+    
+    
+    /**
+     * @return the countires
+     */
+    public List<String> getCountires() {
+        return userService.getCountires();
+    }
+
 }
