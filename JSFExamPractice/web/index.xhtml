@@ -9,28 +9,40 @@
     </h:head>
     <h:body>
         <h:form id="form">
-            Username:
-            <h:inputText id="username" value="#{userBean.user.username}">
-                <f:validateLength maximum="6" minimum="4"/>
-                <f:ajax event="blur" render="show" onerror="show"></f:ajax>
-            </h:inputText>
-            <h:message for="username" />
-            Password:
-            <h:inputText value="#{userBean.user.password}" validator="#{userBean.customValidator}" validatorMessage="Cannot contain @">
-                <ui:remove>
-                    <f:validator validatorId="javax.faces.validator.LengthValidator"/>
-                    <f:attribute name="minimum" value='3'/>
-                </ui:remove>             
-            </h:inputText>
-            <h:selectOneMenu value="#{userBean.user.country}">
-                <f:selectItems  value="#{userBean.countires}" var="c" itemLabel="#{c}" itemValue="#{c}"></f:selectItems>
-                
-                
-            </h:selectOneMenu>
-            
-            <h:commandButton action="#{userBean.login()}" value="Login"></h:commandButton>
-            <h:commandButton value="Cancel" type="reset"/>
-            <h:outputText id="show" value="#{userBean.user.username}"/>
+            <h:panelGrid columns =  "2">
+                <h:panelGroup>
+                    Username:
+                </h:panelGroup>
+                <h:panelGroup>    
+                    <h:inputText id="username" value="#{userBean.user.username}">
+                        <f:validateLength maximum="6" minimum="4"/>
+                        <f:ajax event="blur" render="show" onerror="show"></f:ajax>
+                    </h:inputText>
+                    <h:message for="username" />
+                </h:panelGroup>
+                <h:panelGroup>
+                    Password:
+                </h:panelGroup>
+                <h:panelGroup>
+                    <h:inputText value="#{userBean.user.password}" validator="#{userBean.customValidator}" validatorMessage="Cannot contain @">
+                        <ui:remove>
+                            <f:validator validatorId="javax.faces.validator.LengthValidator"/>
+                            <f:attribute name="minimum" value='3'/>
+                        </ui:remove>             
+                    </h:inputText>
+                </h:panelGroup>    
+                <h:panelGroup></h:panelGroup>
+                <h:panelGroup>
+                    <h:selectOneMenu value="#{userBean.user.country}">
+                        <f:selectItems  value="#{userBean.countires}" var="c" itemLabel="#{c}" itemValue="#{c}"></f:selectItems>
+                    </h:selectOneMenu>
+                </h:panelGroup>        
+                <h:panelGroup>
+                    <h:commandButton action="#{userBean.login()}" value="Login"></h:commandButton>
+                    <h:commandButton value="Cancel" type="reset"/>
+                    <h:outputText id="show" value="#{userBean.user.username}"/>
+                </h:panelGroup>
+            </h:panelGrid>
         </h:form>
     </h:body>
 </html>
