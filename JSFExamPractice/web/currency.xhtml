@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>TODO supply a title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body>
+        <h:form id="form">
+            WelCome to money changer
+            <h:panelGrid>
+                Fill the form
+                <h:panelGroup>
+                    <h:selectOneMenu value="#{rb.country}" id="countryInput">
+                        <f:selectItems value="#{rb.exchangeRates.entrySet()}" var="entry"
+                                       itemLabel="#{entry.key}" itemValue="#{entry.key}">                           
+                        </f:selectItems>
+                        <f:ajax event="click" execute="@this totalSendMoney"
+                                listener="#{rb.calculateTotalAmount()}"
+                                render="symbolInput valueInput exchangeInput"
+                                ></f:ajax>
+                    </h:selectOneMenu>
+                </h:panelGroup>
+                How much do you want to send?
+                <h:panelGroup>
+                    <h:inputText value="#{rb.howMuchMoney}"
+                                 id="totalSendMoney"
+                                 label = "totalMoneySend"
+                                 validator = "#{rb.moneyValidator}"
+                                 >
+                        <f:ajax event="blur" execute="@this"
+                                listener="#{rb.calculateTotalAmount()}"
+                                render="exchangeInput somethingChange"
+                                ></f:ajax>
+
+                    </h:inputText>   
+                    <h:message for = "totalSendMoney" 
+                               id = "somethingChange" 
+                               style = "color: red;" />
+                </h:panelGroup>
+                Delivery Currency
+                <h:panelGroup>
+                    <h:outputText value= "#{rb.currency.symbol}" 
+                                  id = "symbolInput" />
+                </h:panelGroup>  
+                Exchange Rate
+                <h:panelGroup>
+                    <h:outputText value = "#{rb.currency.value}" 
+                                  id = "valueInput"/>
+                </h:panelGroup>
+                Exchange Amount
+                <h:panelGroup>
+                    <h:outputText value = "#{rb.exchangeAmount}" 
+                                  id = "exchangeInput" >
+                        <f:convertNumber minFractionDigits = "2" />
+                    </h:outputText>
+                </h:panelGroup>
+            </h:panelGrid>
+            <h:commandButton value = "Submit" 
+                             action = "welcome">
+                <f:ajax/>
+            </h:commandButton>
+        </h:form>
+    </h:body>
+</html>

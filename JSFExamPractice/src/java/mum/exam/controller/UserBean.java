@@ -29,7 +29,7 @@ public class UserBean implements Serializable{
     @Inject
     private UserService userService;
     List<String> countires;
-    
+    private boolean islogedIn = false;
     
     /**
      * @return the user
@@ -49,7 +49,8 @@ public class UserBean implements Serializable{
     public String login()
     {
         System.out.println("This is testing: "+user.getUsername()+" Password: "+user.getPassword());
-        return null;
+        islogedIn =true;
+        return "welcome";
     }
     
     public void customValidator(FacesContext fc, UIComponent c, Object value)
@@ -67,6 +68,15 @@ public class UserBean implements Serializable{
      */
     public List<String> getCountires() {
         return userService.getCountires();
+    }
+    
+    public String isLogin()
+    {
+        if(islogedIn==false)
+        {
+            return "index?faces-redirect=true";
+        }
+        return "index";
     }
 
 }
